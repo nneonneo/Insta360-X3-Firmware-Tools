@@ -13,6 +13,19 @@ The directory format is as follows:
 - `f4.bin`: this is the SquashFS root filesystem for the ARM64 application processor. You can unpack and modify it by using `sudo mount_squashfs.sh f4.bin <mountpoint>`: after mounting, make any changes you want to the mounted filesystem, then run the printed `mksquashfs` command to convert it back into a SquashFS image.
 - `f5.bin`: this is the device tree supplied to the Linux kernel. You can modify it by using the `dtc` command: `dtc -I dtb -O dts < f5.bin > f5.dts` to convert it into a text file, and `dtc -I dts -O dtb < f5.dts > f5.bin` to convert it back into a binary file.
 
+## Installing Firmware
+
+After some experimentation, I found an installation strategy that was both easy and fast. However, note that this has only been tested with a single device; use at your own risk!
+
+- Remove the SD card and connect it directly to your computer using an SD card reader. If you do not have an SD card reader, you will have to use the usual update mode.
+- Place the firmware file at the root of the SD card, named exactly `Insta360X3FW.bin`.
+- Eject the SD card from your computer and set it aside.
+- Plug in the camera and turn it on.
+- Set the USB mode to "Android", *not* U Disk Mode.
+- With the device connected to USB and powered on, remove the battery and insert the SD card.
+- The device should immediately begin loading the firmware. Once it finishes and reboots, unplug the USB cable and reinstall the battery.
+- Press the power button. The device should boot into the new firmware.
+
 ## Firmware Downloads
 
 Various versions of the firmware can be found at the following links:
