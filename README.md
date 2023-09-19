@@ -1,6 +1,6 @@
 ## Insta360 X3 Firmware Tools
 
-This repository hosts tools to unpack and repack the firmware for the Insta360 X3. The format is quite similar to the Insta360 Go firmware format, and [@enekochan's Insta360 Go tool](https://github.com/enekochan/insta360-go-firmware-tool) was very useful in figuring out the format.
+This repository hosts tools to unpack and repack the firmware for the Insta360 X3. The format is quite similar to the Insta360 Go firmware format and many other Ambarella devices, and [@enekochan's Insta360 Go tool](https://github.com/enekochan/insta360-go-firmware-tool) was very useful in figuring out the format.
 
 The main usage of the tool is `fwtool.py [unpack|pack] <firmware.bin> <output directory>`. Using `unpack` will unpack the firmware file into a directory, while `pack` will pack the directory back into a new firmware file suitable for loading onto the device.
 
